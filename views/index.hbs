@@ -1,0 +1,40 @@
+<h1 class="center">Url Cuto</h1>
+<h1 id="slogan" class="center">Tu encutador de Url's</h1>
+<div class="bg-info center">
+    <section class="insert">
+        <h3>URL a Encutar (Ejemplo: www.google.com.gt)</h3>
+        <form action="/insert" method="POST">
+            <div class="input form-group">
+                
+                <input type="text" class="form-control" name="url1" id="url1">
+            </div>
+            <button class ="btn btn-success" type="submit">Encutarme el URL</button>
+        </form>
+    </section>
+</div>
+<hr>
+<div class="container center">
+    <div class="card bg-dark text-white">
+        <section class="get"></section>
+            <div>
+            <h3>URL Cuto</h3>
+            
+            <a href="/get-data" class="btn btn-success" >Mostrar URL Cuto</a>
+            </div>
+            <!--<div>
+            
+                <ul>
+                {{# each items}}
+                    <li>Url Id: {{ this.ide}}</li>
+                    <li>Url: {{ this.inurl}}</li>
+                    <br>
+                {{/each}}
+                </ul>
+            
+            </div>-->
+            <div class="card-body">
+                Tu url encutado es: url/get/{{last.ide}}
+            </div>
+        </section>
+    </div>
+</div>

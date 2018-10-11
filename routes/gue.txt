@@ -1,0 +1,35 @@
+mongo.connect(url,function(err,db){
+
+    var myquery = {_id:"urlid"};
+    var newvalue = {$inc:{sequence_value:1}}
+    db.collection("counters").update(myquery,newvalue,function(err,res){
+      if (err) throw err;
+      console.log("Updated");
+    });
+    //var counter = db.collection("counters").findOne({});
+    
+    db.collection("counters").findOne({},function(err,res){
+      if (err) throw err;
+      console.log(res);
+      nextid = nextid.concat(res.sequence_value);
+      cuto = cutoAlgorithm.encutar(nextid);
+      console.log("...");
+      console.log(".encutado.");
+      console.log(cuto);
+    });
+    
+    var item = {
+      ide:cuto,
+      inurl: req.body.url1,
+      counter: 0
+    };
+    //check if there is no error.
+    assert.equal(null,err);
+    //if there is no error. 
+    db.collection('url_data').insertOne(item, function(err, result){
+      console.log(cuto);
+      assert.equal(null,err);
+      console.log("Item Inserted");
+      db.close();
+    });
+  });

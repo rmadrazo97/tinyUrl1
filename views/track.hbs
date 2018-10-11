@@ -1,0 +1,16 @@
+<div class="bg-info center">
+    <section class="insert">
+        <h3>Ingresa tu Url Cuto a Trackear</h3>
+        <form action="/track-data" method="POST">
+            <div class="input form-group">
+                
+                <input type="text" class="form-control" name="cutourl" id="cutourl">
+            </div>
+            <button class ="btn btn-success" type="submit">Track</button>
+        </form>
+    </section>
+</div>
+<div class="bg-info center">
+    <a href="/track-getdata" class="btn btn-success" >Mostrar Data</a>
+    <h1>Tracking de tu URL Cuto</h1> {{result}}
+</div>

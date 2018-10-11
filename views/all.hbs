@@ -1,0 +1,22 @@
+  <ul>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <th>URL Cuto</th>
+                <th>URL largo</th>
+                <th>Counter</th>
+                <th>Time Created</th>
+            </thead>
+            <tbody>
+            {{# each items}}
+                <tr class="info">
+                    <td>{{ this.ide}}</td>
+                    <td>{{ this.inurl}}</td>
+                    <td>{{ this.counter}}</td>
+                    <td>{{ this.timeCreated}}</td>
+                </tr>
+            {{/each}}
+            </tbody> 
+        </table>
+    </div>
+</ul>
