@@ -2,7 +2,7 @@
 # The project
  Description:
  <br>
- This project, receives a url as an imput, returning a short url, which consists of a 
+ This project, receives a url as an input, returning a short url, which consists of a unique identifier stored in a database. When accesed to this url, using the record identifier, the application gathers the original url, tracks data and redirects the user. 
 # Tools for Development
 ## Runtime
  Node.js
